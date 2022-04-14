@@ -5,7 +5,7 @@ const app = express();
 
 const CLIENT_ID = 'YOUR_CLIENT_ID_HERE';
 const CLIENT_SECRET = 'YOUR_CLIENT_SECRET_HERE';
-const RETURN_URL = 'https://YOUR.RETURN.URL.HERE';
+const RETURN_URL = 'https://YOUR.DOMAIN.HERE/verify';
 
 app.get('/login', (req, res) => {
     res.redirect(`https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${RETURN_URL}&response_type=code&scope=identify guilds`);
